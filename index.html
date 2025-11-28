@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- js -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <!-- 서브폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <ul>
+        <li>
+          <a href="index.html"><img src="/img/logo.png" /></a>
+        </li>
+      </ul>
+      <ul class="bg">
+        <li><a href="#">COMPANY</a></li>
+        <li><a href="#">PRODUCT</a></li>
+        <li><a href="#">R&D</a></li>
+        <li><a href="#">INVESTOR RELATIONS</a></li>
+        <li><a href="#">ESG</a></li>
+        <li><a href="#">CAREER</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#"><i class="fa-solid fa-globe"></i></a>
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <!-- hide -->
+          <a href="#"><i class="fa-solid fa-bars-staggered"></i></a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- visual -->
+    <div id="visual">
+      <video
+        src="img/mov01_test_6b03a.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+      ></video>
+      <div class="wrap">
+        <div class="typing" id="typing">Best Partner in Mobility</div>
+
+        <div class="right"><h2>NEOOTO</h2></div>
+      </div>
+    </div>
+
+    <!-- container -->
+    <div id="container">
+      <!-- con01 -->
+      <section class="con01">
+        <ul class="title">
+          <li class="left"><h2>세상을 이롭게</h2></li>
+          <li class="right">
+            <h2>하는 기업,<span>NEOOTO</span></h2>
+          </li>
+        </ul>
+
+        <p>
+          네오오토는 진보적인 기술개발로<br />
+          세계 최고의 모빌리티 제품 공급을 통해<br />
+          인류의 안정과 행복에 기여하겠습니다.
+        </p>
+        <div class="btn">
+          <div class="more">
+            <a href="#"><h3>VIEW MORE</h3></a>
+          </div>
+          <span><img src="img/btn_more.svg" /></span>
+        </div>
+      </section>
+
+      <!-- con02 -->
+
+      <section class="con02">
+        <!-- text -->
+        <div class="textbox">
+          <span class="title">PRODUCT</span>
+          <div class="box">
+            네오오토는 고객에게 친환경차 변감속기 등 최고품질의 모빌리티 제품을
+            공급하기 위해 최신 설비와 유연생산시스템을 통한 개발, 생산, 주문
+            관리 및 품질관리 부문까지 엄격한 관리를 진행하고 있으며 자체 단조,
+            가공 공정으로 고객이 요구하는 기술과 품질을 보증합니다.
+          </div>
+        </div>
+
+        <!-- img -->
+        <ul class="imgBox">
+          <li>
+            <a href="#"
+              ><div class="box1">
+                <div class="txt">
+                  <p>Electric car parts</p>
+
+                  <div class="titleWrap">
+                    <h2>전기차부품</h2>
+                    <span><img src="img/btn_more.svg" /></span>
+                  </div>
+                </div>
+                <div class="bg1"><img src="img/bg1.png" /></div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+              ><div class="box2">
+                <div class="txt">
+                  <p>Hybrid parts</p>
+
+                  <div class="titleWrap">
+                    <h2>하이브리드부품</h2>
+                    <span><img src="img/btn_more.svg" /></span>
+                  </div>
+                </div>
+                <div class="bg1"><img src="img/bg2.png" /></div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+              ><div class="box3">
+                <div class="txt">
+                  <p>Internal combustion engine parts</p>
+
+                  <div class="titleWrap">
+                    <h2>내연기관부품</h2>
+                    <span><img src="img/btn_more.svg" /></span>
+                  </div>
+                </div>
+                <div class="bg1"><img src="img/bg3.png" /></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <!-- 흐르는글자 -->
+        <div class="text">
+          NEOOTO WILL NEVER STOP FOR THE FUTURE OF CARS AND THE HAPPINESS OF
+          MANKIND
+        </div>
+      </section>
+
+      <!-- con03 -->
+      <section class="con03">
+        <div class="textBox">
+          <span class="title">
+            GLOBAL<br />
+            BUSINESS
+          </span>
+          <p>
+            네오오토는 최고품질의 제품을<br />오랜 기간 고객에게 공급해 왔습니다
+          </p>
+        </div>
+        <!-- 지구 -->
+        <div class="global">
+          <img
+            src="img/earth.png"
+            style="width: 90%; height: auto; margin: 0px auto"
+          />
+        </div>
+
+        <!--MEXICO -->
+        <div
+          class="country-wrapper"
+          data-country="mexico"
+          style="top: 46%; left: 17%"
+        >
+          <button class="country-btn"></button>
+          <span class="country-label">MEXICO</span>
+        </div>
+
+        <ul
+          class="country-info"
+          data-country="mexico"
+          style="top: 50%; left: 7%"
+        >
+          <li class="name">
+            <div class="text">
+              <h3>MEXICO</h3>
+              <img src="img/MEXICO_logo.svg" />
+            </div>
+            <div class="btn">고객사</div>
+            <div class="brand">
+              <div class="brand-item">
+                <img src="img/kia_icon.svg" />
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!--USA -->
+        <div
+          class="country-wrapper"
+          data-country="usa"
+          style="top: 35%; left: 20%"
+        >
+          <button class="country-btn"></button>
+          <span class="country-label">USA</span>
+        </div>
+
+        <ul class="country-info" data-country="usa" style="top: 40%; left: 10%">
+          <li class="name">
+            <div class="text">
+              <h3>USA</h3>
+              <img src="img/USA_logo.svg" />
+            </div>
+            <div class="btn">고객사</div>
+            <div class="brand">
+              <div class="brand-item">
+                <img src="img/hyundal_icon.svg" />
+              </div>
+              <div class="brand-item">
+                <img src="img/kia_icon.svg" />
+              </div>
+              <div class="brand-item">
+                <img src="img/stellantis_icon.svg" />
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!--CZECH REPUBLIC -->
+        <div
+          class="country-wrapper"
+          data-country="czech"
+          style="top: 35%; right: 30%"
+        >
+          <button class="country-btn"></button>
+          <span class="country-label">CZECH REPUBLIC </span>
+        </div>
+
+        <ul
+          class="country-info"
+          data-country="czech"
+          style="top: 41%; left: 14%"
+        >
+          <li class="name">
+            <div class="text">
+              <h3>CZECH REPUBLIC</h3>
+              <img src="img/CZECH_REPUBLIC_logo.svg" />
+            </div>
+            <div class="btn">고객사</div>
+            <div class="brand">
+              <div class="brand-item">
+                <img src="img/hyundal_icon.svg" />
+              </div>
+              <div class="brand-item">
+                <img src="img/kia_icon.svg" />
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!--INDIA -->
+        <div
+          class="country-wrapper"
+          data-country="india"
+          style="bottom: 43%; right: 22.5%"
+        >
+          <button class="country-btn"></button>
+          <span class="country-label">INDIA</span>
+        </div>
+
+        <ul
+          class="country-info"
+          data-country="india"
+          style="bottom: 25%; left: 15%"
+        >
+          <li class="name">
+            <div class="text">
+              <h3>INDIA</h3>
+              <img src="img/INDIA_logo.svg" />
+            </div>
+            <div class="btn">고객사</div>
+            <div class="brand">
+              <div class="brand-item">
+                <img src="img/hyundal_icon.svg" />
+              </div>
+            </div>
+            <div class="btn">고객사</div>
+            <div class="brand">
+              <div class="brand-item">
+                <img src="img/oto_icon.svg" />
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!--VIETNAM -->
+        <div
+          class="country-wrapper"
+          data-country="vietnam"
+          style="bottom: 40%; right: 14%"
+        >
+          <button class="country-btn"></button>
+          <span class="country-label">VIETNAM</span>
+        </div>
+
+        <ul
+          class="country-info"
+          data-country="vietnam"
+          style="top: 50%; right: 27%"
+        >
+          <li class="name">
+            <div class="text">
+              <h3>VIETNAM</h3>
+              <img src="img/VIETNAM_logo.svg" />
+            </div>
+            <div class="btn">고객사</div>
+            <div class="brand">
+              <div class="brand-item">
+                <img src="img/toyota_icon.svg" />
+              </div>
+              <div class="brand-item">
+                <img src="img/fcc_icon.svg" />
+              </div>
+              <div class="brand-item">
+                <img src="img/hyundal_icon.svg" />
+              </div>
+            </div>
+            <div class="btn">고객사</div>
+            <div class="brand">
+              <div class="brand-item">
+                <img src="img/oto_icon.svg" />
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!--CHINA -->
+        <div
+          class="country-wrapper"
+          data-country="china"
+          style="top: 48%; right: 18%"
+        >
+          <button class="country-btn"></button>
+          <span class="country-label">CHINA</span>
+        </div>
+
+        <ul
+          class="country-info"
+          data-country="china"
+          style="top: 48%; right: 31%"
+        >
+          <li class="name">
+            <div class="text">
+              <h3>CHINA</h3>
+              <img src="img/CHINA_logo.svg" />
+            </div>
+            <div class="btn">고객사</div>
+            <div class="brand">
+              <div class="brand-item">
+                <img src="img/hyundal_icon.svg" />
+              </div>
+              <div class="brand-item">
+                <img src="img/hyundal_transys_icon.svg" />
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!--KOREA -->
+        <div
+          class="country-wrapper"
+          data-country="korea"
+          style="top: 42%; right: 12%"
+        >
+          <button class="country-btn"></button>
+          <span class="country-label">KOREA</span>
+        </div>
+
+        <ul
+          class="country-info"
+          data-country="korea"
+          style="top: 43%; right: 25%"
+        >
+          <li class="name">
+            <div class="text">
+              <h3>KOREA</h3>
+              <img src="img/KOREA_logo.svg" />
+            </div>
+            <div class="btn">고객사</div>
+            <div class="brand">
+              <div class="brand-item">
+                <img src="img/hyundal_icon.svg" />
+              </div>
+              <div class="brand-item">
+                <img src="img/hyundal_transys_icon.svg" />
+              </div>
+              <div class="brand-item">
+                <img src="img/kia_icon.svg" />
+              </div>
+            </div>
+            <div class="btn">고객사</div>
+            <div class="brand">
+              <div class="brand-item">
+                <img src="img/oto_icon.svg" />
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- 태블릿&모바일 버전 -->
+
+        <div class="mobile-global-slider">
+          <div class="slider-track">
+            <ul class="country-slide" data-country="mexico">
+              <li class="name">
+                <div class="text">
+                  <h3>MEXICO</h3>
+                  <img src="img/MEXICO_logo.svg" />
+                </div>
+                <div class="btn">고객사</div>
+                <div class="brand">
+                  <div class="brand-item">
+                    <img src="img/kia_icon.svg" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="country-slide" data-country="usa">
+              <li class="name">
+                <div class="text">
+                  <h3>USA</h3>
+                  <img src="img/USA_logo.svg" />
+                </div>
+                <div class="btn">고객사</div>
+                <div class="brand">
+                  <div class="brand-item">
+                    <img src="img/hyundal_icon.svg" />
+                  </div>
+                  <div class="brand-item">
+                    <img src="img/kia_icon.svg" />
+                  </div>
+                  <div class="brand-item">
+                    <img src="img/stellantis_icon.svg" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="country-slide" data-country="czech">
+              <li class="name">
+                <div class="text">
+                  <h3>CZECH REPUBLIC</h3>
+                  <img src="img/CZECH_REPUBLIC_logo.svg" />
+                </div>
+                <div class="btn">고객사</div>
+                <div class="brand">
+                  <div class="brand-item">
+                    <img src="img/hyundal_icon.svg" />
+                  </div>
+                  <div class="brand-item">
+                    <img src="img/kia_icon.svg" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="country-slide" data-country="india">
+              <li class="name">
+                <div class="text">
+                  <h3>INDIA</h3>
+                  <img src="img/INDIA_logo.svg" />
+                </div>
+                <div class="btn">고객사</div>
+                <div class="brand">
+                  <div class="brand-item">
+                    <img src="img/hyundal_icon.svg" />
+                  </div>
+                </div>
+                <div class="btn">고객사</div>
+                <div class="brand">
+                  <div class="brand-item">
+                    <img src="img/oto_icon.svg" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="country-slide" data-country="vietnam">
+              <li class="name">
+                <div class="text">
+                  <h3>VIETNAM</h3>
+                  <img src="img/VIETNAM_logo.svg" />
+                </div>
+                <div class="btn">고객사</div>
+                <div class="brand">
+                  <div class="brand-item">
+                    <img src="img/toyota_icon.svg" />
+                  </div>
+                  <div class="brand-item">
+                    <img src="img/fcc_icon.svg" />
+                  </div>
+                  <div class="brand-item">
+                    <img src="img/hyundal_icon.svg" />
+                  </div>
+                </div>
+                <div class="btn">고객사</div>
+                <div class="brand">
+                  <div class="brand-item">
+                    <img src="img/oto_icon.svg" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="country-slide" data-country="china">
+              <li class="name">
+                <div class="text">
+                  <h3>CHINA</h3>
+                  <img src="img/CHINA_logo.svg" />
+                </div>
+                <div class="btn">고객사</div>
+                <div class="brand">
+                  <div class="brand-item">
+                    <img src="img/hyundal_icon.svg" />
+                  </div>
+                  <div class="brand-item">
+                    <img src="img/hyundal_transys_icon.svg" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="country-slide" data-country="korea">
+              <li class="name">
+                <div class="text">
+                  <h3>KOREA</h3>
+                  <img src="img/KOREA_logo.svg" />
+                </div>
+                <div class="btn">고객사</div>
+                <div class="brand">
+                  <div class="brand-item">
+                    <img src="img/hyundal_icon.svg" />
+                  </div>
+                  <div class="brand-item">
+                    <img src="img/hyundal_transys_icon.svg" />
+                  </div>
+                  <div class="brand-item">
+                    <img src="img/kia_icon.svg" />
+                  </div>
+                </div>
+                <div class="btn">고객사</div>
+                <div class="brand">
+                  <div class="brand-item">
+                    <img src="img/oto_icon.svg" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 태블릿&모바일 BAR -->
+        <div class="mobile-global-slider"></div>
+
+        <div class="slider-dots"></div>
+
+        <div class="flowing-text"></div>
+        <!-- 흐르는글자 -->
+        <div class="flowing-text">
+          GLOBAL BUSINESS GLOBAL BUSINESS GLOBAL BUSINESS GLOBAL BUSINESS
+        </div>
+      </section>
+
+      <!-- con04 -->
+
+      <section class="con04">
+        <div class="textBox">
+          <span class="title">ESG</span>
+          <p>
+            좋은 기업이 좋은 제품을 만들 수 있다는 신념을 가지고 <br />지속적인
+            사회공헌활동을 실시하고 있습니다.
+          </p>
+        </div>
+
+        <ul class="imgBox">
+          <li>
+            <a href="#"
+              ><div class="box1">
+                <div class="txt">
+                  <p>ESG Management</p>
+
+                  <div class="titleWrap">
+                    <strong>ESG 경영</strong>
+                    <span><img src="img/btn_more.svg" /></span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+              ><div class="box2">
+                <div class="txt">
+                  <p>Ethics Management</p>
+
+                  <div class="titleWrap">
+                    <strong>윤리경영</strong>
+                    <span><img src="img/btn_more.svg" /></span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+              ><div class="box3">
+                <div class="txt">
+                  <p>Cyber Newspapers</p>
+
+                  <div class="titleWrap">
+                    <strong>사이버신문고</strong>
+
+                    <span><img src="img/btn_more.svg" /></span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="text">NEOOTO’S ENVIRONMENT·SOCIAL·GOVERNANCE</div>
+      </section>
+
+      <!-- con05 -->
+      <section class="con05">
+        <div class="textBox">
+          <span class="title">CONTACT</span>
+        </div>
+
+        <!-- 왼쪽고정박스 -->
+        <div class="wrap">
+          <ul class="list">
+            <li class="on"><a href="#">All</a></li>
+            <li><a href="#">NOTICE</a></li>
+            <li><a href="#">NEWS</a></li>
+          </ul>
+
+          <!-- 오른쪽움직이는스크롤 -->
+
+          <div class="listBox">
+            <div class="top">
+              <p>
+                우리는 새로운 세상을 열어가는 데 기여하고 함께 성장합니다.<br />
+                네오오토의 투명하고 공정한 소식을 알아보세요.
+              </p>
+              <div class="btn">
+                <div class="more">
+                  <a href="#"><h3>VIEW MORE</h3></a>
+                </div>
+                <span><img src="img/btn_more.svg" /></span>
+              </div>
+            </div>
+
+            <!-- All -->
+            <div class="all">
+              <div class="slider-container">
+                <!-- 움직이는 서브 슬라이드들 -->
+                <div class="sub-slides-wrapper">
+                  <div class="alls" id="sliderTrack">
+                    <!-- 슬라이드 1 -->
+                    <div
+                      class="slide"
+                      data-title="(주)네오오토 무상증자결정"
+                      data-desc="안녕하세요, 글로벌 모빌리티 부품 시장을 선도하는 네오오토입니다.당사의 주요사항보고로 무상증자를 결정하게 되었음을 알려드립니다.  1. 신주의 종류와 수 보통주식 (주)  3,937,278 기타주식 (주)  - 2. 1주당 액면가액 (원)
+  5"
+                      data-img="./img/logo.png"
+                    >
+                      <div class="slide-image">
+                        <img src="img/logo.png" alt="기업 협약식" />
+                      </div>
+                    </div>
+
+                    <!-- 슬라이드 2 -->
+                    <div
+                      class="slide"
+                      data-title="네오오토, 4공장 증설 착수... 생산 CAPA 확대 본격화"
+                      data-desc=" 글로벌 모빌리티 부품 전문 기업 네오오토(대표 김선현, 김원일, 212560)가 충청남도 예산일반산업단지에 4공장 증설을 착수했다.이번에 증설하는 신규공장은 고객사의 차세대 하이브리드 부품 신규수주에 대응하기 위한 것으로 총면적16,505.10㎡(약 5천 평) 규모 부지에 7,452㎡(2,254평) 규모의 기어가공공장"
+                      data-img="./img/asd.jpg"
+                    >
+                      <div class="slide-image">
+                        <img src="img/asd.jpg" alt="사업 발표" />
+                      </div>
+                    </div>
+
+                    <!-- 슬라이드 3 -->
+                    <div
+                      class="slide"
+                      data-title="충남도, 네오오토·피라인모터스 등 21개사와 투자협약 체결"
+                      data-desc="국내외 기업으로부터 역대급 투자 유치 성과를 올리고 있는 민선8기 힘쎈충남이 새해 초부터 강한 ‘투자 유치 드라이브’를 걸고 있다. 지난달 미국과 스위스, 싱가포르 기업 외자를 유치한데 이어, 이번엔 국내 21개 기업으로부터 5600억여 원의 투자를 유치해냈다. 김태흠 지사는 10일 도청 대회의실에서 박상돈 천안시장 등 9개 시군 단체장·"
+                      data-img="./img/asd2.jpg"
+                    >
+                      <div class="slide-image">
+                        <img src="img/asd2.jpg" alt="공장 전경" />
+                      </div>
+                    </div>
+
+                    <!-- 슬라이드 4 -->
+                    <div
+                      class="slide"
+                      data-title="네오오토, 지난해 사상 최대 실적 달성"
+                      data-desc="모빌리티 부품 전문 기업 네오오토는 지난해 영업이익이 122억원을 기록해 전년 대비 18.0% 증가했다고 13일 공시했다.같은 기간 매출액과 순이익은 2179억원, 173억원으로 각각 9.9%, 45.4% 늘었다. 매출액과 영업이익 모두 설립 이래 최대 실적이라고 회사 측은 설명했다.회사는 이번 실적 성장의 주요 요인으로 고객사의 완성차 판매 증가로 인한 "
+                      data-img="./img/logo.png"
+                    >
+                      <div class="slide-image">
+                        <img src="img/logo.png" alt="팀 미팅" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bar">
+                <div class="pagebar" id="pagebar"></div>
+
+                <div class="btn">
+                  <button class="prev" id="prevBtn">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </button>
+                  <button class="next" id="nextBtn">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- notice -->
+            <div class="notice">
+              <div class="slider-container">
+                <!-- 움직이는 서브 슬라이드들 -->
+                <div class="sub-slides-wrapper">
+                  <div class="alls" id="sliderTrack">
+                    <!-- 슬라이드 1 -->
+                    <div
+                      class="slide"
+                      data-title="(주)네오오토 무상증자결정"
+                      data-desc="안녕하세요, 글로벌 모빌리티 부품 시장을 선도하는 네오오토입니다.당사의 주요사항보고로 무상증자를 결정하게 되었음을 알려드립니다.  1. 신주의 종류와 수 보통주식 (주)  3,937,278 기타주식 (주)  - 2. 1주당 액면가액 (원)
+  5"
+                      data-img="./img/logo.png"
+                    >
+                      <div class="slide-image">
+                        <img src="img/logo.png" alt="기업 협약식" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bar">
+                <div class="pagebar" id="pagebar"></div>
+
+                <div class="btn">
+                  <button class="prev" id="prevBtn">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </button>
+                  <button class="next" id="nextBtn">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- NEWS -->
+            <div class="NEWS">
+              <div class="slider-container">
+                <!-- 움직이는 서브 슬라이드들 -->
+                <div class="sub-slides-wrapper">
+                  <div class="alls" id="sliderTrack">
+                    <!-- 슬라이드 1 -->
+                    <div
+                      class="slide"
+                      data-title="네오오토, 4공장 증설 착수... 생산 CAPA 확대 본격화"
+                      data-desc=" 글로벌 모빌리티 부품 전문 기업 네오오토(대표 김선현, 김원일, 212560)가 충청남도 예산일반산업단지에 4공장 증설을 착수했다.이번에 증설하는 신규공장은 고객사의 차세대 하이브리드 부품 신규수주에 대응하기 위한 것으로 총면적16,505.10㎡(약 5천 평) 규모 부지에 7,452㎡(2,254평) 규모의 기어가공공장"
+                      data-img="./img/asd.jpg"
+                    >
+                      <div class="slide-image">
+                        <img src="img/asd.jpg" alt="사업 발표" />
+                      </div>
+                    </div>
+
+                    <!-- 슬라이드 2 -->
+                    <div
+                      class="slide"
+                      data-title="충남도, 네오오토·피라인모터스 등 21개사와 투자협약 체결"
+                      data-desc="국내외 기업으로부터 역대급 투자 유치 성과를 올리고 있는 민선8기 힘쎈충남이 새해 초부터 강한 ‘투자 유치 드라이브’를 걸고 있다. 지난달 미국과 스위스, 싱가포르 기업 외자를 유치한데 이어, 이번엔 국내 21개 기업으로부터 5600억여 원의 투자를 유치해냈다. 김태흠 지사는 10일 도청 대회의실에서 박상돈 천안시장 등 9개 시군 단체장·"
+                      data-img="./img/asd2.jpg"
+                    >
+                      <div class="slide-image">
+                        <img src="img/asd2.jpg" alt="공장 전경" />
+                      </div>
+                    </div>
+
+                    <!-- 슬라이드 3 -->
+                    <div
+                      class="slide"
+                      data-title="네오오토, 지난해 사상 최대 실적 달성"
+                      data-desc="모빌리티 부품 전문 기업 네오오토는 지난해 영업이익이 122억원을 기록해 전년 대비 18.0% 증가했다고 13일 공시했다.같은 기간 매출액과 순이익은 2179억원, 173억원으로 각각 9.9%, 45.4% 늘었다. 매출액과 영업이익 모두 설립 이래 최대 실적이라고 회사 측은 설명했다.회사는 이번 실적 성장의 주요 요인으로 고객사의 완성차 판매 증가로 인한 "
+                      data-img="./img/logo.png"
+                    >
+                      <div class="slide-image">
+                        <img src="img/logo.png" alt="팀 미팅" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bar">
+                <div class="pagebar" id="pagebar"></div>
+
+                <div class="btn">
+                  <button class="prev" id="prevBtn">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </button>
+                  <button class="next" id="nextBtn">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer -->
+
+    <footer>
+      <div class="Box1">
+        <strong
+          >Let's Get Started
+          <br />
+          with NEOOTO
+        </strong>
+        <div class="start">
+          <span>Let’s start!</span>
+        </div>
+      </div>
+
+      <div class="Box2">
+        <ul class="bg1">
+          <li>
+            <strong>본사 : </strong>
+            <span>서울 종로구 새문안로5길 19, 로얄빌딩 6층</span>
+          </li>
+          <li>
+            <strong>TEL_ </strong>
+            <span>02-732-2871</span>
+          </li>
+          <li>
+            <strong>FAX_ </strong>
+            <span>02-6732-2870</span>
+          </li>
+        </ul>
+        <ul class="bg2">
+          <li>
+            <strong>예산 1공장 : </strong>
+            <span>충남 예산군 삽교읍 두루머리길8 </span>
+          </li>
+          <li>
+            <strong>TEL_ </strong>
+            <span>041-337-1730 </span>
+          </li>
+          <li>
+            <strong>FAX_ </strong>
+            <span>041-337-1756</span>
+          </li>
+        </ul>
+        <ul class="bg3">
+          <li>
+            <strong>예산 2공장 : </strong>
+            <span>충남 예산군 삽교읍 두루머리길33</span>
+          </li>
+          <li>
+            <strong>예산 3공장 : </strong>
+            <span> 충남 예산군 삽교읍 산단2길 85</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="Box3">
+        <!-- left -->
+        <ul class="left">
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li>
+            <span>COPYRIGHTⓒNEOOTO CO., Ltd. ALL RRIGHTS RESERVED.</span>
+          </li>
+        </ul>
+
+        <!-- right -->
+        <div class="right">
+          <div class="blackBox">
+            <p>오토인더스토리</p>
+          </div>
+
+          <div class="btns">
+            <button class="familySite">
+              Family Site
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <button class="topBtn">↑</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/custom.js"></script>
+  </body>
+</html>
