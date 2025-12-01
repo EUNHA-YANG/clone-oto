@@ -824,6 +824,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initSlider(".con05 .notice");
   initSlider(".con05 .NEWS");
 });
+
 // footer
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -835,7 +836,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Family Site 버튼 클릭
   if (familySiteBtn && blackBox) {
     familySiteBtn.addEventListener("click", () => {
-      // 토글
       const isActive = blackBox.classList.contains("show");
 
       if (isActive) {
