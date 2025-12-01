@@ -74,7 +74,6 @@ gsap.from(".con01 .title .right h2", {
 });
 
 // con02
-
 // 초기 상태 설정 - 카드들을 가운데 겹쳐놓기
 gsap.set(".con02 li:nth-child(1)", {
   x: 530,
@@ -96,10 +95,16 @@ gsap.set(".con02 li", {
   pointerEvents: "none",
 });
 
-// 텍스트 숨기기
-gsap.set(".con02 li .txt", {
-  opacity: 0,
-});
+// 텍스트 숨기기 (데스크톱만)
+if (window.innerWidth > 1024) {
+  gsap.set(".con02 li .txt", {
+    opacity: 0,
+  });
+} else {
+  gsap.set(".con02 li .txt", {
+    opacity: 1,
+  });
+}
 
 // PRODUCT 타이틀 - 왼쪽에서
 gsap.from(".con02 .textbox .title", {
@@ -166,14 +171,23 @@ gsap.to(".con02 li:nth-child(3)", {
     start: "top 70%",
   },
   onComplete: function () {
-    // 애니메이션 완료 후 호버 활성화
-    gsap.set(".con02 li", { pointerEvents: "auto" });
-    setupAccordion();
+    // 데스크톱에서만 호버 활성화
+    if (window.innerWidth > 1024) {
+      gsap.set(".con02 li", { pointerEvents: "auto" });
+      setupAccordion();
+    } else {
+      gsap.set(".con02 li", { pointerEvents: "none" });
+    }
   },
 });
 
-// 아코디언 효과
+// 아코디언 효과 (데스크톱만)
 function setupAccordion() {
+  // 태블릿/모바일에서는 실행하지 않음
+  if (window.innerWidth <= 1024) {
+    return;
+  }
+
   const cards = document.querySelectorAll(".con02 li");
   const container = document.querySelector(".con02 ul");
 
@@ -182,7 +196,7 @@ function setupAccordion() {
       // 현재 카드 확대
       gsap.to(card, {
         width: 750,
-        y: 0, // 높이 맞추기
+        y: 0,
         duration: 0.6,
         ease: "power2.out",
       });
@@ -192,7 +206,7 @@ function setupAccordion() {
         if (otherIndex !== index) {
           gsap.to(otherCard, {
             width: 250,
-            y: 0, // 높이 맞추기
+            y: 0,
             duration: 0.6,
             ease: "power2.out",
           });
@@ -229,6 +243,41 @@ function setupAccordion() {
     });
   });
 }
+let resizeTimer;
+window.addEventListener("resize", function () {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function () {
+    const cards = document.querySelectorAll(".con02 li");
+
+    if (window.innerWidth > 1024) {
+      // 데스크톱: 호버 활성화
+      gsap.set(".con02 li", { pointerEvents: "auto" });
+      gsap.set(".con02 li .txt", { opacity: 0 });
+
+      // 카드 초기화
+      cards.forEach((card, index) => {
+        gsap.set(card, {
+          width: 530,
+          y: index * 25,
+        });
+      });
+
+      setupAccordion();
+    } else {
+      // 태블릿/모바일: 호버 비활성화
+      gsap.set(".con02 li", { pointerEvents: "none" });
+      gsap.set(".con02 li .txt", { opacity: 1 });
+
+      // 카드 초기화
+      cards.forEach((card) => {
+        gsap.set(card, {
+          width: "auto",
+          y: 0,
+        });
+      });
+    }
+  }, 250);
+});
 
 //con03
 document.addEventListener("DOMContentLoaded", function () {
@@ -464,23 +513,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // con04
 
-// 카드들가운데 겹쳐놓기
+// 화면 크기에 따른 초기 위치 설정
+function getCardOffset04() {
+  const screenWidth = window.innerWidth;
+  if (screenWidth <= 768) {
+    return 0; // 모바일
+  } else if (screenWidth <= 1024) {
+    return 300; // 태블릿
+  } else {
+    return 530; // 데스크톱
+  }
+}
+
+const offset04 = getCardOffset04();
+
+// 초기 상태 설정 - 카드들을 가운데 겹쳐놓기
 gsap.set(".con04 .imgBox li:nth-child(1)", {
-  x: 530,
-  y: -25,
-  rotation: -15,
+  x: offset04,
+  rotation: window.innerWidth <= 768 ? 0 : -10,
 });
 
 gsap.set(".con04 .imgBox li:nth-child(2)", {
   x: 0,
-  y: 0,
   rotation: 0,
 });
 
 gsap.set(".con04 .imgBox li:nth-child(3)", {
-  x: -530,
-  y: 25,
-  rotation: 15,
+  x: -offset04,
+  rotation: window.innerWidth <= 768 ? 0 : 10,
 });
 
 // 애니메이션 중 호버 비활성화
@@ -488,7 +548,7 @@ gsap.set(".con04 .imgBox li", {
   pointerEvents: "none",
 });
 
-// ESG 타이틀 - 왼쪽에서 오른쪽으로
+// ESG 타이틀 - 왼쪽에서
 gsap.from(".con04 .textBox .title", {
   x: -200,
   opacity: 0,
@@ -497,11 +557,10 @@ gsap.from(".con04 .textBox .title", {
   scrollTrigger: {
     trigger: ".con04",
     start: "top 80%",
-    toggleActions: "play none none none",
   },
 });
 
-// 오른쪽 설명 텍스트 - 오른쪽에서 왼쪽으로
+// 오른쪽 설명 텍스트 - 오른쪽에서
 gsap.from(".con04 .textBox p", {
   x: 200,
   opacity: 0,
@@ -510,56 +569,52 @@ gsap.from(".con04 .textBox p", {
   scrollTrigger: {
     trigger: ".con04",
     start: "top 80%",
-    toggleActions: "play none none none",
   },
 });
 
-// li들 - 겹쳐있다가 펼쳐지면서 계단형으로
+// 카드 1 - 펼쳐지기
 gsap.to(".con04 .imgBox li:nth-child(1)", {
   x: 0,
-  y: 0, // 계단 0px
+  y: window.innerWidth > 1024 ? 0 : 0,
   rotation: 0,
   duration: 0.8,
   delay: 0.3,
   ease: "power3.out",
   scrollTrigger: {
     trigger: ".con04 .imgBox",
-    start: "top 80%",
-    toggleActions: "play none none none",
+    start: "top 70%",
   },
 });
 
+// 카드 2 - 펼쳐지기
 gsap.to(".con04 .imgBox li:nth-child(2)", {
   x: 0,
-  y: 25, // 계단 25px
+  y: window.innerWidth > 1024 ? 25 : 0,
   rotation: 0,
   duration: 0.8,
   delay: 0.4,
   ease: "power3.out",
   scrollTrigger: {
     trigger: ".con04 .imgBox",
-    start: "top 80%",
-    toggleActions: "play none none none",
+    start: "top 70%",
   },
 });
 
+// 카드 3 - 펼쳐지기 + 호버 활성화
 gsap.to(".con04 .imgBox li:nth-child(3)", {
   x: 0,
-  y: 50, // 계단 50px
+  y: window.innerWidth > 1024 ? 50 : 0,
   rotation: 0,
   duration: 0.8,
   delay: 0.5,
   ease: "power3.out",
   scrollTrigger: {
     trigger: ".con04 .imgBox",
-    start: "top 80%",
-    toggleActions: "play none none none",
+    start: "top 70%",
   },
   onComplete: function () {
     // 애니메이션 완료 후 호버 활성화
-    gsap.set(".con04 .imgBox li", {
-      pointerEvents: "auto",
-    });
+    gsap.set(".con04 .imgBox li", { pointerEvents: "auto" });
   },
 });
 
@@ -572,6 +627,10 @@ document.addEventListener("DOMContentLoaded", function () {
     opacity: 0,
     duration: 1.2,
     ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".con05",
+      start: "top 80%",
+    },
   });
 
   // All, Notice, News 섹션들 - 위에서 아래로 순차적으로
@@ -579,24 +638,36 @@ document.addEventListener("DOMContentLoaded", function () {
     y: -80,
     opacity: 0,
     duration: 0.8,
-    delay: 0.4,
+    delay: 0.3,
     ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".con05",
+      start: "top 80%",
+    },
   });
 
   gsap.from(".con05 .notice", {
     y: -80,
     opacity: 0,
     duration: 0.8,
-    delay: 0.8,
+    delay: 0.5,
     ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".con05",
+      start: "top 80%",
+    },
   });
 
   gsap.from(".con05 .NEWS", {
     y: -80,
     opacity: 0,
     duration: 0.8,
-    delay: 1.2,
+    delay: 0.7,
     ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".con05",
+      start: "top 80%",
+    },
   });
 
   // 탭 메뉴 스크롤 기능
