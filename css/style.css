@@ -451,6 +451,7 @@ header img {
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 6;
 }
 .con03 .country-wrapper::after {
   content: "";
